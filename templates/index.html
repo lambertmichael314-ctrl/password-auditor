@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Auditor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Strength Auditor</h1>
+        <p>Enter a password to evaluate its cryptographic strength.</p>
+        
+        <input type="password" id="password-input" placeholder="Type password here..." autocomplete="off">
+        
+        <div class="strength-meter">
+            <div id="strength-bar"></div>
+        </div>
+
+        <div class="metrics">
+            <span id="entropy-value">Entropy: 0 bits</span>
+        </div>
+
+        <ul id="feedback">
+            <!-- JavaScript will inject feedback here -->
+        </ul>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #1e1e1e;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    width: 450px;
+    border: 1px solid #333;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: #00ffcc;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    border: 2px solid #333;
+    background: #000;
+    color: #00ffcc;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #00ffcc;
+}
+
+.strength-meter {
+    height: 12px;
+    background-color: #333;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#strength-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #ff4d4d;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.5s ease;
+}
+
+.metrics {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 1.5rem;
+    text-align: right;
+}
+
+#feedback {
+    list-style-type: none;
+    padding: 0;
+    font-size: 0.85rem;
+    color: #ff9999;
+}
+
+#feedback li {
+    margin-bottom: 8px;
+    padding-left: 5px;
+    border-left: 3px solid #ff4d4d;
+}
+
+/* Success style for feedback when green */
+#feedback li[style*="color: rgb(46, 204, 113)"] {
+    border-left: 3px solid #2ecc71;
+}
